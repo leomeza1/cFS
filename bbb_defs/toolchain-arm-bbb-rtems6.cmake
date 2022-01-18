@@ -1,13 +1,10 @@
-# This example toolchain file describes the cross compiler to use for
+# This toolchain file describes the cross compiler to use for
 # the target architecture indicated in the configuration file.
 
-# In this sample application, the cross toolchain is configured to
-# use a compiler for the RTEMS operating system targeting the "pc686" BSP
-
-# Note that to use this, the "RTEMS" platform module may need to be added
+# Note that to use this, the "RTEMS6" platform module may need to be added
 # to the system-wide CMake installation as a default CMake does not yet
 # recognize RTEMS as a system name.  An example of this is distributed with
-# the pc-rtems PSP.
+# the generic-rtems PSP.
 
 # Basic cross system configuration
 set(CMAKE_SYSTEM_NAME       RTEMS6)
@@ -65,5 +62,4 @@ SET(OSAL_SYSTEM_OSTYPE                  rtems)
 ADD_DEFINITIONS(-D_RTEMS_5_)
 # This is critical to allow sockets to work with bsdlib networking
 ADD_DEFINITIONS(-DFD_SETSIZE=256)
-
 
